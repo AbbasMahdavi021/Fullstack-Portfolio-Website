@@ -22,11 +22,11 @@
   
     img {
       width: 90px;
-      height: 20px;
+      height: 55px;
   
       @media screen and (min-width: 2000px) {
         width: 180px;
-        height: 40px;
+        height: 110px;
       }
     }
   }
@@ -76,7 +76,7 @@
       }
     }
   
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 900px) {
       display: none;
     }
   }
@@ -162,12 +162,12 @@
         }
       }
   
-      @media screen and (min-width: 480px) {
+      @media screen and (min-width: 900px) {
         display: none;
       }
     }
   
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 900px) {
       display: none;
     }
   }
