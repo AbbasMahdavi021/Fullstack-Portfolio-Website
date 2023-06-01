@@ -4,6 +4,7 @@ import Header from './Header/Header';
 import Skills from './Skills/Skills';
 import Testimonial from './Testimonial/Testimonial';
 import Work from './Work/Work';
+import Resume from './Resume/Resume';
 
 export {
   About,
@@ -12,4 +13,5 @@ export {
   Skills,
   Testimonial,
   Work,
+  Resume
 };
