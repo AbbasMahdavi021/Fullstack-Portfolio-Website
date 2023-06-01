@@ -22,7 +22,7 @@ const About = () => {
 
   return (
     <>
-      <h2 class="head-text">I Understand that <span>Innovation</span> <br />drives  <span>Success</span></h2>
+      <h2 class="head-text">Innovation serves as a <span>catalyst</span> <br />for achieving  <span>Success</span></h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
