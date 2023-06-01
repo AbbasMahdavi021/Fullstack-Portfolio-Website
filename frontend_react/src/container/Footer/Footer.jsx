@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -27,12 +28,28 @@ const Footer = () => {
       message: formData.message,
     };
 
+    emailjs.send('service_kua3an3', 'template_mvh5vwb', contact, 'yfLwCcM7iIVHBaBvd')
+      .then((response) => {
+        console.log('Email sent successfully:', response.text);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error.text);
+        setLoading(false);
+      });
+
+
+
+
     client.create(contact)
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
       })
       .catch((err) => console.log(err));
+
+
+
   };
 
   return (
