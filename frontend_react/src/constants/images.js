@@ -35,6 +35,8 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
+import myResume from '../assets/myResume.JPG';
+
 export default {
   email,
   mobile,
@@ -69,4 +71,5 @@ export default {
   nb,
   skype,
   spotify,
+  myResume,
 };

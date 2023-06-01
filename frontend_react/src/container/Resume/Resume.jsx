@@ -1,17 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { BsDownload } from 'react-icons/bs';
+
+import myResume from './myResume.pdf';
+
+import '../Footer/Footer.scss'
+
 
 const Resume = () => {
 
+    const downloadResume = () => {
+
+        const link = document.createElement('a');
+        link.href = myResume;
+        link.download = `Abbas-Mahdavi-Resume.pdf`;
+        link.click();
+    };
+
     return (
         <>
-            <h2 className="head-text">My Resume</h2>
+            <div className='app__resume-cards'>
 
-            <div className="app__footer-cards">
-                <button type="button" className="p-text" >Download Resume</button>
+                <h2 className="head-text">My Resume</h2>
 
+                <img id="myResume" src={images.myResume} alt="myResume" />
+
+                <div className="app__social">
+                    <div onClick={downloadResume}>
+                        <BsDownload />
+                    </div>
+                </div>
             </div>
         </>
     );
