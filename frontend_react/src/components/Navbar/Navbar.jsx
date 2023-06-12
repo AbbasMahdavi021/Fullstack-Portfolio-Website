@@ -13,11 +13,11 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const downloadResume = () => {
-
     const link = document.createElement('a');
     link.href = myResume;
     link.download = `Abbas-Mahdavi-Resume.pdf`;
     link.click();
+    setToggle(false)
   };
 
   return (
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <a href={`https://www.linkedin.com/in/abbas-mahdavi-9514b7258/`} target="_blank" rel="noopener noreferrer" onClick={() => setToggle(false)}>
                   LinkedIn
                 </a><br /><br />
-                <a onClick={downloadResume}>
+                <a href={'#resume'} onClick={downloadResume}>
                   Download Resume
                 </a>
               </li>
