@@ -22,23 +22,24 @@ const About = () => {
 
   return (
     <>
-      <h2 class="head-text">Innovation serves as a <span>catalyst</span> <br />for achieving  <span>Success</span></h2>
+      <h2 class="head-text"><span>Proactive</span> and <span>Adaptable</span> Software Developer <span>Eager </span> 
+                            to Contribute To The <span>Success</span > Of < span > Your Team</span ></h2 >
 
-      <div className="app__profiles">
-        {abouts.map((about, index) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            className="app__profile-item"
-            key={about.title + index}
-          >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
-          </motion.div>
-        ))}
-      </div>
+        <div className="app__profiles">
+          {abouts.map((about, index) => (
+            <motion.div
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: 'tween' }}
+              className="app__profile-item"
+              key={about.title + index}
+            >
+              <img src={urlFor(about.imgUrl)} alt={about.title} />
+              <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
+              <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
+            </motion.div>
+          ))}
+        </div>
     </>
   )
 }

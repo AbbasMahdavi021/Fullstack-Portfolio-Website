@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
+import myResume from '../../container/Resume/PDF-Resume-Abbas Mahdavi.pdf';
+
 
 import './Navbar.scss'
 
@@ -9,6 +11,14 @@ import { images } from '../../constants'
 const Navbar = () => {
 
   const [toggle, setToggle] = useState(false);
+
+  const downloadResume = () => {
+
+    const link = document.createElement('a');
+    link.href = myResume;
+    link.download = `Abbas-Mahdavi-Resume.pdf`;
+    link.click();
+  };
 
   return (
     <nav className="app__navbar">
@@ -41,6 +51,20 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+            </ul>
+            <ul>
+              <li>
+                <br /><br /><br /><br />
+                <a href={`https://github.com/AbbasMahdavi021`} target="_blank" rel="noopener noreferrer" onClick={() => setToggle(false)}>
+                  Github
+                </a><br /><br />
+                <a href={`https://www.linkedin.com/in/abbas-mahdavi-9514b7258/`} target="_blank" rel="noopener noreferrer" onClick={() => setToggle(false)}>
+                  LinkedIn
+                </a><br /><br />
+                <a onClick={downloadResume}>
+                  Download Resume
+                </a>
+              </li>
             </ul>
           </motion.div>
         )}
