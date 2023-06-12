@@ -4,7 +4,7 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { BsDownload } from 'react-icons/bs';
 
-import myResume from './myResume.pdf';
+import myResume from './PDF-Resume-Abbas Mahdavi.pdf';
 
 import '../Footer/Footer.scss'
 
@@ -22,16 +22,16 @@ const Resume = () => {
     return (
         <>
             <div className='app__resume-cards'>
-
-                <h2 className="head-text">My Resume</h2>
-
-                <img id="myResume" src={images.myResume} alt="myResume" />
-
                 <div className="app__social">
-                    <div onClick={downloadResume}>
+                    <h2 className="head-text">My Resume</h2>
+                    <div id="download-resume" onClick={downloadResume}>
                         <BsDownload />
                     </div>
                 </div>
+
+                <img id="myResume" src={images.myResume} alt="myResume" />
+
+
             </div>
         </>
     );
