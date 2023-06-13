@@ -46,17 +46,15 @@ const Skills = () => {
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences.map((experience) => (
-            <motion.div
-              className="app__skills-exp-item"
-              key={experience.year}
-            >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
-              </div>
-              <motion.div className="app__skills-exp-works">
-                {experience.works.map((work) => (
-                  <>
+          {experiences
+            .sort((a, b) => b.year - a.year) // Sort the experiences in descending order based on year
+            .map((experience) => (
+              <motion.div className="app__skills-exp-item" key={experience.year}>
+                <div className="app__skills-exp-year">
+                  <p className="bold-text">{experience.year}</p>
+                </div>
+                <motion.div className="app__skills-exp-works">
+                  {experience.works.map((work) => (
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
@@ -67,15 +65,17 @@ const Skills = () => {
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
-                      <h4 className="bold-text"><br/>{work.desc}</h4>
-
+                      <h4 className="bold-text">
+                        <br />
+                        {work.desc}
+                      </h4>
                     </motion.div>
-                  </>
-                ))}
+                  ))}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          ))}
+            ))}
         </div>
+
       </div>
     </>
   );
