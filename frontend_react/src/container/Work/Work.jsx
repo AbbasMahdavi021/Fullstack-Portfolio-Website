@@ -40,7 +40,6 @@ const Work = () => {
     }, 500);
   };
 
-
   return (
     <>
       <h2 className="head-text">Journey Through my <span>Software Development</span> Portfolio</h2>
@@ -100,12 +99,28 @@ const Work = () => {
 
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
+
+              {work.description.includes('Stack:') ? (
+                <>
+                  <p className="p-text" style={{ marginTop: 10 }}>
+                    {work.description.split('Stack:')[0]}
+                  </p>
+                  <br/>
+                  <p className="p-text">
+                  <strong>Stack:</strong> {work.description.split('Stack:')[1]}
+                  </p>
+                </>
+              ) : (
+                <p className="p-text" style={{ marginTop: 10 }}>
+                  {work.description}
+                </p>
+              )}
+
+
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0].includes('Stack:') ? work.tags[0].replace('Stack:', '\nStack:') : work.tags[0]}</p>
+                <p className="p-text">{work.tags[0]}</p>
               </div>
-
             </div>
           </div>
         ))}
