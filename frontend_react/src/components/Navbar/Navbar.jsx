@@ -26,7 +26,7 @@ const Navbar = () => {
         <img src={images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {['home', 'about', 'work', 'skills', 'contact', 'resume'].map((item) => (
+        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -44,7 +44,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact', 'resume'].map((item) => (
+              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
@@ -61,9 +61,9 @@ const Navbar = () => {
                 <a href={`https://www.linkedin.com/in/abbas-mahdavi-9514b7258/`} target="_blank" rel="noopener noreferrer" onClick={() => setToggle(false)}>
                   LinkedIn
                 </a><br /><br />
-                <a href={'#resume'} onClick={downloadResume}>
+                {/* <a href={'#resume'} onClick={downloadResume}>
                   Download Resume
-                </a>
+                </a> */}
               </li>
             </ul>
           </motion.div>
