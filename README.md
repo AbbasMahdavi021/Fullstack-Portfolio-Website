@@ -2,7 +2,7 @@
 
 This repository contains the code for a FullStack Personal Portfolio website built with React, JavaScript, and SASS on the frontend, and utilizes various technologies such as Framer Motion for animations. The backend is powered by Sanity, a flexible and scalable content management system, which enables easy editing and reusability of the site's content.
 
-View App Live: http://abbasmahdavi.com/ 
+View App Live: https://abbasmahdavi.vercel.app
 
 ## Technologies Used
 React: A popular JavaScript library for building user interfaces, providing a responsive and interactive frontend experience.
