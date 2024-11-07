@@ -3,7 +3,7 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 const SocialMedia = () => {
 
-    const linkedInURL = 'https://www.linkedin.com/in/abbas-mahdavi-9514b7258';
+    const linkedInURL = 'https://www.linkedin.com/in/abbasmahdavi/';
     const githubURL = 'https://github.com/AbbasMahdavi021';
 
     const goToGithub = () => {

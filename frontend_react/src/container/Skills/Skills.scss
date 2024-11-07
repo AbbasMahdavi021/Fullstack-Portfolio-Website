@@ -11,7 +11,7 @@
     margin-top: 3rem;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     @media screen and (max-width: 900px) {
         width: 100%;
@@ -23,7 +23,7 @@
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: flex-start;
 
     margin-right: 5rem;
